@@ -1,0 +1,14 @@
+{
+  "name": "boteso",
+  "version": "1.0.0",
+  "description": "bot para organizar discord da guild",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "enzo tiezzi",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
