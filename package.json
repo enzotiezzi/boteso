@@ -1,14 +1,26 @@
 {
   "name": "boteso",
   "version": "1.0.0",
-  "description": "bot para organizar discord da guild",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc index.ts && node index.js"
   },
-  "author": "enzo tiezzi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enzotiezzi/boteso.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enzotiezzi/boteso/issues"
+  },
+  "homepage": "https://github.com/enzotiezzi/boteso#readme",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.20"
   }
 }
