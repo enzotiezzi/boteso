@@ -3,8 +3,6 @@ import { Comandos } from "../comandos";
 import { IExecuter } from "../i-executer";
 
 export class EventoExecuter implements IExecuter{
-    type: string = Comandos.CRIAR_EVENTO;
-
     run(args: string[]): void {
         // !criar-evento FarmPVP 11/01/2020 21:00 99 PVP
 
