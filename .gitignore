@@ -2,3 +2,4 @@ node_modules
 auth.ts
 *.js
 db.ts
+.idea
