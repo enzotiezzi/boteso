@@ -20,5 +20,8 @@ export class CriarEventoExecuter implements IExecuter{
 
             Output.getCurrentMessage().reply(outputMessage);
         }
+        else {
+            Output.getCurrentMessage().reply("Erro ao criar evento!!\nA quantidade de parâmetros está incorreta.\nExemplo de comando: !criar-evento FarmPVP 11/01/2020 21:00 12 PVP");
+        }
     }
 }
