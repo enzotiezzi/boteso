@@ -1,5 +1,4 @@
 import { Client, Message } from 'discord.js';
-import { auth } from './auth';
 import { CommandHandler } from './commands/command-handler';
 import { Output } from './output';
 
@@ -20,6 +19,6 @@ export class Bot {
             }
         });
 
-        client.login(auth.TOKEN || process.env.TOKEN);
+        client.login(process.env.TOKEN);
     }
 }
