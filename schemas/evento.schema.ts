@@ -6,6 +6,7 @@ export interface IEvento extends Document{
     horario: string;
     quantidadeMaximaDePlayers: number;
     tipo: string;
+    ativo: boolean;
 }
 
 export const EventoSchema = new Schema({
@@ -27,6 +28,10 @@ export const EventoSchema = new Schema({
     },
     tipo: {
         type: String,
+        required: true
+    },
+    ativo: {
+        type: Boolean,
         required: true
     }
 });

@@ -1,10 +1,12 @@
 import { Comandos } from "./comandos";
-import { EventoExecuter } from "./evento/evento.executer";
+import { CriarEventoExecuter } from "./evento/evento.executer";
+import { ListarEventosExecuter } from "./evento/listar-eventos.executer";
 import { IExecuter } from "./i-executer";
 
 export class Executers {
     static executers: Map<string, IExecuter> = new Map([
-        [Comandos.CRIAR_EVENTO, new EventoExecuter()]
+        [Comandos.CRIAR_EVENTO, new CriarEventoExecuter()],
+        [Comandos.LISTAR_EVENTOS, new ListarEventosExecuter]
     ]);;
 
     static getExecuter(type: string): IExecuter | null {

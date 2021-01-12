@@ -1,3 +1,3 @@
 export interface IExecuter {
-    run(args: string[]): void;
+    run(args: string[]): Promise<void>;
 }
