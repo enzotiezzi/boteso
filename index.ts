@@ -3,7 +3,7 @@ import * as mongoose from 'mongoose';
 import { db } from "./db";
 
 mongoose
-    .connect(db.connectionString, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(db.connectionString || process.env.connectionString!.toString(), { useNewUrlParser: true, useUnifiedTopology: true })
     .then(_ => {
         Application.run();
     });

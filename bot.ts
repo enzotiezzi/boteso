@@ -20,6 +20,6 @@ export class Bot {
             }
         });
 
-        client.login(auth.TOKEN);
+        client.login(auth.TOKEN || process.env.TOKEN);
     }
 }
