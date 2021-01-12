@@ -8,7 +8,7 @@ export class Bot {
         const client = new Client();
 
         client.on('ready', () => {
-            console.log('ready freddy ?');
+            console.log('ready freddie ?');
         });
 
         client.on('message', (message: Message) => {
