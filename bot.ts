@@ -1,6 +1,7 @@
 import { Client, Message } from 'discord.js';
 import { auth } from './auth';
 import { CommandHandler } from './commands/command-handler';
+import { Output } from './output';
 
 export class Bot {
     initialize() {
@@ -12,6 +13,7 @@ export class Bot {
 
         client.on('message', (message: Message) => {
             console.log(message.content);
+            Output.setCurrentMessage(message);
 
             if (message.content.substr(0, 1) == "!") {
                 CommandHandler.executeCommand(message.content.substr(1, message.content.length - 1));

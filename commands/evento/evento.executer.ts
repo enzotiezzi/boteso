@@ -1,5 +1,6 @@
 import { IExecuter } from "../i-executer";
 import Evento, { EventoSchema, IEvento } from "../../schemas/evento.schema";
+import { Output } from "../../output";
 
 export class CriarEventoExecuter implements IExecuter{
     async run(args: string[]): Promise<void> {
@@ -15,7 +16,9 @@ export class CriarEventoExecuter implements IExecuter{
                 ativo: true
             });
 
-            console.log("evento criado com sucesso: ", evento.nome);
+            const outputMessage = `\nEvento ${evento.nome} criado com sucesso.\nSeu Evento irá acontecer no dia ${evento.data} no horário ${evento.horario}.\nQuantidade máxima de players: ${evento.quantidadeMaximaDePlayers}.\nTipo do evento: ${evento.tipo}`;
+
+            Output.getCurrentMessage().reply(outputMessage);
         }
     }
 }
