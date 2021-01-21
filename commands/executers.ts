@@ -1,4 +1,5 @@
 import { Comandos } from "./comandos";
+import { AnunciarEventoExecuter } from "./evento/anunciar-evento.executer";
 import { CriarEventoExecuter } from "./evento/evento.executer";
 import { FinalizarEventoExecuter } from "./evento/finalizar-evento.executer";
 import { ListarEventosExecuter } from "./evento/listar-eventos.executer";
@@ -10,7 +11,8 @@ export class Executers {
         [Comandos.CRIAR_EVENTO, new CriarEventoExecuter()],
         [Comandos.LISTAR_EVENTOS, new ListarEventosExecuter()],
         [Comandos.ESCOLHER_FACCAO, new FaccaoExecuter()],
-        [Comandos.FINALIZAR_EVENTO, new FinalizarEventoExecuter()]
+        [Comandos.FINALIZAR_EVENTO, new FinalizarEventoExecuter()],
+        [Comandos.ANUNCIAR_EVENTO,  new AnunciarEventoExecuter()]
     ]);;
 
     static getExecuter(type: string): IExecuter | null {
